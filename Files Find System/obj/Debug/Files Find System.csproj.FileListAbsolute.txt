@@ -1,0 +1,32 @@
+C:\csharp projelerim\Files Find System\Files Find System\bin\Debug\Files Find System.exe.config
+C:\csharp projelerim\Files Find System\Files Find System\bin\Debug\Files Find System.exe
+C:\csharp projelerim\Files Find System\Files Find System\bin\Debug\Files Find System.pdb
+C:\csharp projelerim\Files Find System\Files Find System\obj\Debug\Files Find System.csproj.AssemblyReference.cache
+C:\csharp projelerim\Files Find System\Files Find System\obj\Debug\Files_Find_System.Form1.resources
+C:\csharp projelerim\Files Find System\Files Find System\obj\Debug\Files_Find_System.Properties.Resources.resources
+C:\csharp projelerim\Files Find System\Files Find System\obj\Debug\Files Find System.csproj.GenerateResource.cache
+C:\csharp projelerim\Files Find System\Files Find System\obj\Debug\Files Find System.csproj.CoreCompileInputs.cache
+C:\csharp projelerim\Files Find System\Files Find System\obj\Debug\Files Find System.exe
+C:\csharp projelerim\Files Find System\Files Find System\obj\Debug\Files Find System.pdb
+C:\csharp projelerim\Files Find System\Files Find System\obj\Debug\Files_Find_System.DataViewerPage.resources
+C:\csharp projelerim\Files Find System\Files Find System\obj\Debug\Files_Find_System.HomePage.resources
+C:\csharp projelerim\Files Find System\Files Find System\bin\Debug\Spire.Doc.dll
+C:\csharp projelerim\Files Find System\Files Find System\bin\Debug\Spire.Pdf.dll
+C:\csharp projelerim\Files Find System\Files Find System\bin\Debug\Microsoft.mshtml.dll
+C:\csharp projelerim\Files Find System\Files Find System\bin\Debug\Spire.Doc.xml
+C:\csharp projelerim\Files Find System\Files Find System\bin\Debug\Spire.Pdf.xml
+C:\csharp projelerim\Files Find System\Files Find System\obj\Debug\Files_Find_System.WordViewerPage.resources
+C:\csharp projelerim\Files Find System\Files Find System\obj\Debug\Files Find System.csproj.CopyComplete
+C:\csharp projelerim\Files Find System\Files Find System\bin\Debug\Spire.OfficeViewer.Forms.dll
+C:\csharp projelerim\Files Find System\Files Find System\bin\Debug\Spire.Presentation.dll
+C:\csharp projelerim\Files Find System\Files Find System\bin\Debug\Spire.XLS.dll
+C:\csharp projelerim\Files Find System\Files Find System\bin\Debug\Spire.OfficeViewer.Forms.xml
+C:\csharp projelerim\Files Find System\Files Find System\bin\Debug\Spire.Presentation.xml
+C:\csharp projelerim\Files Find System\Files Find System\bin\Debug\Spire.XLS.xml
+C:\csharp projelerim\Files Find System\Files Find System\obj\Debug\Files Find System.exe.licenses
+C:\csharp projelerim\Files Find System\Files Find System\bin\Debug\Guna.UI2.dll
+C:\csharp projelerim\Files Find System\Files Find System\obj\Debug\Files_Find_System.LoginPage.resources
+C:\csharp projelerim\Files Find System\Files Find System\bin\Debug\Files Find System.exe.manifest
+C:\csharp projelerim\Files Find System\Files Find System\bin\Debug\Files Find System.application
+C:\csharp projelerim\Files Find System\Files Find System\obj\Debug\Files Find System.exe.manifest
+C:\csharp projelerim\Files Find System\Files Find System\obj\Debug\Files Find System.application
