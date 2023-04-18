@@ -19,7 +19,7 @@ namespace Files_Find_System
         public string extension = "";
         private DataTable dataTable = new DataTable();
         bool searchMode = false;
-        Image image = Image.FromFile("assets/filesicons/folder_30px.png");
+        //Image image = Image.FromFile("assets/filesicons/folder_30px.png");
         public bool autoSelection = false;
         private string[] audioExts = {
             ".mp3",
@@ -34,7 +34,7 @@ namespace Files_Find_System
         public DataViewerPage()
         {
             InitializeComponent();
-            dataTable.Columns.Add(".", typeof(Image));
+            //dataTable.Columns.Add(".", typeof(Image));
             dataTable.Columns.Add("Ad");
             dataTable.Columns.Add("Yol");
             dataTable.Columns.Add("Uzantı");
@@ -134,21 +134,21 @@ namespace Files_Find_System
                                     FileSecurity fileSecurity = File.GetAccessControl(file);
                                     AuthorizationRuleCollection fileRules = fileSecurity.GetAccessRules(true, true, typeof(NTAccount));
                                     FileInfo fileInfo = new FileInfo(file);
-                                    image = Image.FromFile(SetImagesPath(fileInfo.Extension));
-                                    Image thumbnail = image.GetThumbnailImage(20, 20, null, IntPtr.Zero);
+                                    //image = Image.FromFile(SetImagesPath(fileInfo.Extension));
+                                    //Image thumbnail = image.GetThumbnailImage(20, 20, null, IntPtr.Zero);
                                     if (!searchMode)
                                     {
                                         // Verileri DataTable'e ekleyin
                                         //dataTable.Rows.Add(fileInfo.Name, fileInfo.FullName, fileInfo.Extension);
                                         dataGridView1.RowTemplate.Height = 50;
-                                        dataTable.Rows.Add(thumbnail, fileInfo.Name, fileInfo.FullName, fileInfo.Extension);
+                                        dataTable.Rows.Add(fileInfo.Name, fileInfo.FullName, fileInfo.Extension);
                                     }
                                     else
                                     {
                                         if (searchBox.Text.ToLower() == fileInfo.Name.ToLower() || searchBox.Text.ToLower() == fileInfo.FullName.ToLower()|| searchBox.Text.ToLower() == fileInfo.Name.Remove(fileInfo.Name.Length-4).ToLower())
                                         {
                                             dataGridView1.RowTemplate.Height = 50;
-                                            dataTable.Rows.Add(thumbnail, fileInfo.Name, fileInfo.FullName, fileInfo.Extension);
+                                            dataTable.Rows.Add(fileInfo.Name, fileInfo.FullName, fileInfo.Extension);
                                         }
                                     }
                                 }
@@ -159,7 +159,7 @@ namespace Files_Find_System
                         }
                         else
                         {
-                            Image thumbnail = image.GetThumbnailImage(20, 20, null, IntPtr.Zero);
+                           // Image thumbnail = image.GetThumbnailImage(20, 20, null, IntPtr.Zero);
                             try
                             {
                                 string[] subDirectories = Directory.GetDirectories(path, "*", SearchOption.AllDirectories);
@@ -172,14 +172,14 @@ namespace Files_Find_System
                                             // Verileri DataTable'e ekleyin
                                             //dataTable.Rows.Add(fileInfo.Name, fileInfo.FullName, fileInfo.Extension);
                                             dataGridView1.RowTemplate.Height = 50;
-                                            dataTable.Rows.Add(thumbnail, Path.GetDirectoryName(sub), Path.GetFullPath(sub), "Klasör");
+                                            dataTable.Rows.Add(Path.GetDirectoryName(sub), Path.GetFullPath(sub), "Klasör");
                                         }
                                         else
                                         {
                                             if (searchBox.Text.ToLower() == Path.GetDirectoryName(sub).ToLower() || searchBox.Text.ToLower() == Path.GetFullPath(sub).ToLower())
                                             {
                                                 dataGridView1.RowTemplate.Height = 50;
-                                                dataTable.Rows.Add(thumbnail, Path.GetDirectoryName(sub), Path.GetFullPath(sub), "Klasör");
+                                                dataTable.Rows.Add(Path.GetDirectoryName(sub), Path.GetFullPath(sub), "Klasör");
                                             }
                                         }
                                     }
@@ -307,8 +307,8 @@ namespace Files_Find_System
             try
             {
                 dataGridView1.Refresh();
-                dataGridView1.Columns[0].Width = 20;
-                dataGridView1.Columns[3].Width = 100;
+                dataGridView1.Columns[2].Width = 100;
+                dataGridView1.Columns[0].Width = 400;
                 dataGridView1.RowTemplate.Height = 80;
             }
             catch
@@ -318,8 +318,8 @@ namespace Files_Find_System
 
         private void DataViewerPage_Resize(object sender, EventArgs e)
         {
-            dataGridView1.Columns[0].Width = 20;
-            dataGridView1.Columns[3].Width = 100;
+            dataGridView1.Columns[2].Width = 100;
+            dataGridView1.Columns[0].Width = 400;
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -330,21 +330,21 @@ namespace Files_Find_System
                 {
                     DataGridViewRow row = dataGridView1.Rows[e.RowIndex]; // satırı al
                     string value = row.Cells[e.ColumnIndex].Value.ToString(); // ilk hücrenin değerini al
-                    if (e.ColumnIndex == 1)
+                    if (e.ColumnIndex == 0)
                     {
                         if (extension == "word" || extension == "excel"||extension=="pdf"||extension== "documents")
                         {
-                            if (row.Cells[3].Value.ToString()!=".txt"&& row.Cells[3].Value.ToString() != ".html")
+                            if (row.Cells[2].Value.ToString()!=".txt"&& row.Cells[2].Value.ToString() != ".html")
                             {
                                 //burada word önizleme sayfası açılacak
-                                value = row.Cells[2].Value.ToString();
+                                value = row.Cells[1].Value.ToString();
                                 WordViewerPage page = new WordViewerPage();
                                 page.path = value;
                                 page.Show();
                             }
                             else
                             {
-                                value = row.Cells[2].Value.ToString();
+                                value = row.Cells[1].Value.ToString();
                                 System.Diagnostics.Process.Start(value);
                             }
                         }
@@ -354,10 +354,10 @@ namespace Files_Find_System
                             System.Diagnostics.Process.Start(value);
                         }
                     }
-                    else if (e.ColumnIndex == 2)
+                    else if (e.ColumnIndex == 1)
                     {
                         //klasöre git
-                        value = row.Cells[2].Value.ToString().Trim(row.Cells[1].Value.ToString().ToCharArray());
+                        value = row.Cells[1].Value.ToString().Trim(row.Cells[0].Value.ToString().ToCharArray());
                         System.Diagnostics.Process.Start(value);
                     }
                 }

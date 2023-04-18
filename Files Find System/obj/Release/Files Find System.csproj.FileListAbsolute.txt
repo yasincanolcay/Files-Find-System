@@ -18,7 +18,6 @@ C:\csharp projelerim\Files Find System\Files Find System\obj\Release\Files_Find_
 C:\csharp projelerim\Files Find System\Files Find System\obj\Release\Files_Find_System.Form1.resources
 C:\csharp projelerim\Files Find System\Files Find System\obj\Release\Files_Find_System.HomePage.resources
 C:\csharp projelerim\Files Find System\Files Find System\obj\Release\Files_Find_System.LoginPage.resources
-C:\csharp projelerim\Files Find System\Files Find System\obj\Release\Files_Find_System.PdfViewerPage.resources
 C:\csharp projelerim\Files Find System\Files Find System\obj\Release\Files_Find_System.Properties.Resources.resources
 C:\csharp projelerim\Files Find System\Files Find System\obj\Release\Files_Find_System.WordViewerPage.resources
 C:\csharp projelerim\Files Find System\Files Find System\obj\Release\Files Find System.csproj.GenerateResource.cache
@@ -27,3 +26,7 @@ C:\csharp projelerim\Files Find System\Files Find System\obj\Release\Files Find 
 C:\csharp projelerim\Files Find System\Files Find System\obj\Release\Files Find System.csproj.CopyComplete
 C:\csharp projelerim\Files Find System\Files Find System\obj\Release\Files Find System.exe
 C:\csharp projelerim\Files Find System\Files Find System\obj\Release\Files Find System.pdb
+C:\csharp projelerim\Files Find System\Files Find System\bin\Release\Files Find System.exe.manifest
+C:\csharp projelerim\Files Find System\Files Find System\bin\Release\Files Find System.application
+C:\csharp projelerim\Files Find System\Files Find System\obj\Release\Files Find System.exe.manifest
+C:\csharp projelerim\Files Find System\Files Find System\obj\Release\Files Find System.application
